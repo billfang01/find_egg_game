@@ -24,7 +24,7 @@ image_files = [f"images/step{i+1}.png" for i in range(7)]
 # 顯示圖片與標籤
 for i in range(7):
     with st.container():
-        st.image(image_files[i], use_column_width=True)
+        st.image(st.image(image_path, use_container_width=True))
         st.markdown(f"**{steps[i]}**")
 
 # 重新開始按鈕
