@@ -3,6 +3,7 @@ import streamlit as st
 from PIL import Image
 import os
 
+
 st.set_page_config(page_title="荷包蛋製作遊戲", layout="centered")
 
 st.title("🍳 請點選正確的步驟圖卡：")
@@ -24,7 +25,7 @@ image_files = [f"images/step{i+1}.png" for i in range(7)]
 # 顯示圖片與標籤
 for i in range(7):
     with st.container():
-        st.image(st.image(image_path, use_container_width=True))
+        st.image(image_files[i], use_container_width=True)
         st.markdown(f"**{steps[i]}**")
 
 # 重新開始按鈕
